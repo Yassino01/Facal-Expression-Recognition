@@ -44,3 +44,8 @@ Réseaux convolutionel avec attention, comme le montre la figure suivante.
 
 * Lancer le script prepare_data.py
 
+### Apprentissage du modèle Deep Emotion :
+
+* Lancer le script train.py (le script fait égakement l'évaluation du modèles en validation)
+
+
