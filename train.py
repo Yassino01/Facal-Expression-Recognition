@@ -97,6 +97,9 @@ if __name__ == '__main__':
   train_img_dir = DATA_PATH+'/'+'finaltrain/'
   validation_img_dir = DATA_PATH+'/'+'val/'
 
+  batchsize = 128
+  epochs = 200
+
   transformation= transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
   train_dataset= Plain_Dataset(csv_file=traincsv_file, img_dir = train_img_dir, datatype = 'finaltrain', transform = transformation)
   validation_dataset= Plain_Dataset(csv_file=validationcsv_file, img_dir = validation_img_dir, datatype = 'val', transform = transformation)

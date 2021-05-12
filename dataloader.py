@@ -20,15 +20,15 @@ class Plain_Dataset(Dataset):
     return len(self.csv_file)
 
   def __getitem__(self,idx):
-  if torch.is_tensor(idx):
+    if torch.is_tensor(idx):
       idx = idx.tolist()
-  img = Image.open(self.img_dir+self.datatype+str(idx)+'.jpg')
-  lables = np.array(self.lables[idx])
-  lables = torch.from_numpy(lables).long()
+    img = Image.open(self.img_dir+self.datatype+str(idx)+'.jpg')
+    lables = np.array(self.lables[idx])
+    lables = torch.from_numpy(lables).long()
 
-  if self.transform :
+    if self.transform :
       img = self.transform(img)
-  return img,lables
+    return img,lables
 
 
 def eval_data_dataloader(csv_file,img_dir,datatype,sample_number,transform= None):
@@ -41,11 +41,11 @@ def eval_data_dataloader(csv_file,img_dir,datatype,sample_number,transform= None
           sample_number : any number from the data to be shown
   '''
   if transform is None :
-      transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
+    transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
   dataset = Plain_Dataset(csv_file=csv_file,img_dir = img_dir,datatype = datatype,transform = transform)
 
   label = dataset.__getitem__(sample_number)[1]
-  print(label)
+  #print(label)
   imgg = dataset.__getitem__(sample_number)[0]
   imgnumpy = imgg.numpy()
   imgt = imgnumpy.squeeze()

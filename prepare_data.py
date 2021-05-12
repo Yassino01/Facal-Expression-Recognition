@@ -5,6 +5,7 @@ from PIL import Image
 import os
 from tqdm import tqdm
 
+DATA_PATH = './data'
 
 class Prepare_data():
   def __init__(self, datapath):
@@ -56,3 +57,11 @@ class Prepare_data():
         img = self.str_to_image(images[index])
         img.save(os.path.join(foldername,'{}{}.jpg'.format(datatype,index)),'JPEG')
     print('Done saving {} data'.format((foldername)))
+
+if __name__ == '__main__':
+
+  generate_dataset = Prepare_data(DATA_PATH)
+  generate_dataset.split_train_val()
+  generate_dataset.save_images()
+  generate_dataset.save_images('finaltest')
+  generate_dataset.save_images('val')
