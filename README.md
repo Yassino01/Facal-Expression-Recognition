@@ -48,4 +48,15 @@ Réseaux convolutionel avec attention, comme le montre la figure suivante.
 
 * Lancer le script train.py (le script fait égakement l'évaluation du modèles en validation)
 
+* Résultats en train ci-dessous :
+
+<p align="center">
+  <img src="imgs/accuracy-1.png" width="960" title="Training accuracy ">
+</p>
+
+<p align="center">
+  <img src="imgs/loss-1.png" width="960" title="Training CrossEntropyLoss ">
+</p>
+
+
 
