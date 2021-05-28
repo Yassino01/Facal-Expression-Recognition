@@ -58,5 +58,24 @@ Réseaux convolutionel avec attention, comme le montre la figure suivante.
   <img src="imgs/loss-1.png" width="960" title="Training CrossEntropyLoss ">
 </p>
 
+#### Matrice de confusion :
+
+<p align="center">
+  <img src="imgs/confusionmatrix.png" width="960" title="Confusion Matrix">
+</p>
+
+#### Silent Map :
+
+<p align="center">
+  <img src="imgs/salient_map.png" width="960" title="Salient map">
+</p>
+
+
+### Test du modèle FER en temps-réel avec la webcam:
+
+* Lancer le script cam_FaceEmotion.py , avec le chemin du modèle pre-entrainé en argyment (deep-emotion2-200-128-0.005.pt)
+* Le script cam_FaceDetection.py fait uniquement la détéction du visage à partir de la webcam et non pas la detection de sentiment.
+
+
 
 
