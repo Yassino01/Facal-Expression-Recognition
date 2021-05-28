@@ -67,7 +67,7 @@ Réseaux convolutionel avec attention, comme le montre la figure suivante.
 #### Silent Map :
 
 <p align="center">
-  <img src="imgs/salient_map.png" width="960" title="Salient map">
+  <img src="imgs/salient_map.png" width="300" title="Salient map">
 </p>
 
 
